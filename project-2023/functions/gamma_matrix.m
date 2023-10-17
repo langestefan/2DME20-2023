@@ -6,17 +6,17 @@ k_s = linspace(-(K-1)/2, (K-1)/2, K);
 ck_s = (4/3) * tau * k_s;
 
 % constant term in front of the vector
-alpha = k_hat * exp(-p_z * (pi/tau));
+const = k_hat * exp(-p_z * (pi/tau));
 
 % create gamma matrix
 matrix = zeros(3, K);
 for i = 1:K
     c_k = ck_s(i);
-    const = (pi/tau) * (p_x - c_k);
-    matrix(1, i) = sin(const);
-    matrix(2, i) = cos(const);
-    matrix(3, i) = p_z * sin(const) - (p_x - c_k) * cos(const);
+    alpha_k = (pi/tau) * (p_x - c_k);
+    matrix(1, i) = sin(alpha_k);
+    matrix(2, i) = cos(alpha_k);
+    matrix(3, i) = p_z * sin(alpha_k) - (p_x - c_k) * cos(alpha_k);
 end
 % multiply by alpha
-matrix = alpha * matrix;
+matrix = const * matrix;
 end
