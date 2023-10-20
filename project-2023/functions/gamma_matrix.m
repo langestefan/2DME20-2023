@@ -17,6 +17,6 @@ for i = 1:K
     matrix(2, i) = cos(alpha_k);
     matrix(3, i) = p_z * sin(alpha_k) - (p_x - c_k) * cos(alpha_k);
 end
-% multiply by alpha
+% multiply by const
 matrix = const * matrix;
 end
