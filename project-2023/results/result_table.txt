@@ -1,0 +1,11 @@
+target 3: min number of active coils
+Pcom 		= 2.3137e+04 [W]
+max(i_com) 	= 36.8536 [A]
+
+target 1: minimize absorbed power
+Pcom 		= 3.9963e+03 [W]
+max(i_com) 	= 8.0114 [A]
+
+target 2: min abs maximum current
+Pcom 		= 4.4300e+03 [W]
+max(i_com) 	= 5.7832 [A]
