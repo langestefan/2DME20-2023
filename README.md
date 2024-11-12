@@ -2,4 +2,7 @@
 
 ## Installation
 
-This code is tested using Python 3.11.3.
+I did both projects, from 2022-2023 and 2023/2024.
+
+- Project 2022/2023: Optimal ellipse fitting on image data
+- Project 2023/2024: Planar actuator
