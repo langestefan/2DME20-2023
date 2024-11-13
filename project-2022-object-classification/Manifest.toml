@@ -2,7 +2,13 @@
 
 julia_version = "1.10.4"
 manifest_format = "2.0"
-project_hash = "0e7d0b51ffcc04f5732ef0c13f3c68ec0d31155d"
+project_hash = "e304b6df072039c5073691027cdca2b2974a1c92"
+
+[[deps.AMD]]
+deps = ["LinearAlgebra", "SparseArrays", "SuiteSparse_jll"]
+git-tree-sha1 = "45a1272e3f809d36431e57ab22703c6896b8908f"
+uuid = "14f7f29c-3bd6-536c-9a0b-7339e30b5a3e"
+version = "0.5.3"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -72,6 +78,18 @@ deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg"]
 git-tree-sha1 = "8873e196c2eb87962a2048b3b8e08946535864a1"
 uuid = "6e34b625-4abd-537c-b88f-471c36dfa7a0"
 version = "1.0.8+2"
+
+[[deps.COSMO]]
+deps = ["AMD", "COSMOAccelerators", "DataStructures", "IterTools", "LinearAlgebra", "MathOptInterface", "Pkg", "Printf", "QDLDL", "Random", "Reexport", "Requires", "SparseArrays", "Statistics", "SuiteSparse", "Test", "UnsafeArrays"]
+git-tree-sha1 = "9ee9809bde10b6875ca58aadcb22af8e36bd83f9"
+uuid = "1e616198-aa4e-51ec-90a2-23f7fbd31d8d"
+version = "0.8.9"
+
+[[deps.COSMOAccelerators]]
+deps = ["LinearAlgebra", "Random", "SparseArrays", "Test"]
+git-tree-sha1 = "b1153b40dd95f856e379f25ae335755ecc24298e"
+uuid = "bbd8fffe-5ad0-4d78-a55e-85575421b4ac"
+version = "0.1.0"
 
 [[deps.Cairo_jll]]
 deps = ["Artifacts", "Bzip2_jll", "CompilerSupportLibraries_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll", "JLLWrappers", "LZO_jll", "Libdl", "Pixman_jll", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Zlib_jll", "libpng_jll"]
@@ -392,6 +410,18 @@ deps = ["Artifacts", "Cairo_jll", "Fontconfig_jll", "FreeType2_jll", "Glib_jll",
 git-tree-sha1 = "401e4f3f30f43af2c8478fc008da50096ea5240f"
 uuid = "2e76f6c2-a576-52d4-95c1-20adfe4de566"
 version = "8.3.1+0"
+
+[[deps.HiGHS]]
+deps = ["HiGHS_jll", "MathOptInterface", "PrecompileTools", "SparseArrays"]
+git-tree-sha1 = "d5e7cdcf171243e68f9214abdc0457d702be9a63"
+uuid = "87dc4568-4c63-4d18-b0c0-bb2238e4078b"
+version = "1.12.0"
+
+[[deps.HiGHS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "Zlib_jll"]
+git-tree-sha1 = "c12314e192631fc302078e27a06da5ab51770e3b"
+uuid = "8fd58aa0-07eb-5a78-9b36-339c94fd15ea"
+version = "1.8.0+0"
 
 [[deps.ImageBase]]
 deps = ["ImageCore", "Reexport"]
@@ -863,6 +893,12 @@ uuid = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 deps = ["Printf"]
 uuid = "9abbd945-dff8-562f-b5e8-e1ebf5ef1b79"
 
+[[deps.QDLDL]]
+deps = ["AMD", "LinearAlgebra", "SparseArrays"]
+git-tree-sha1 = "5a3c14e534faf5b66c4633b5770a665ec1a87503"
+uuid = "bfc457fd-c171-5ab7-bd9e-d5dbfc242d63"
+version = "0.4.1"
+
 [[deps.Qt6Base_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "Fontconfig_jll", "Glib_jll", "JLLWrappers", "Libdl", "Libglvnd_jll", "OpenSSL_jll", "Vulkan_Loader_jll", "Xorg_libSM_jll", "Xorg_libXext_jll", "Xorg_libXrender_jll", "Xorg_libxcb_jll", "Xorg_xcb_util_cursor_jll", "Xorg_xcb_util_image_jll", "Xorg_xcb_util_keysyms_jll", "Xorg_xcb_util_renderutil_jll", "Xorg_xcb_util_wm_jll", "Zlib_jll", "libinput_jll", "xkbcommon_jll"]
 git-tree-sha1 = "492601870742dcd38f233b23c3ec629628c1d724"
@@ -1014,6 +1050,10 @@ git-tree-sha1 = "5cf7606d6cef84b543b483848d4ae08ad9832b21"
 uuid = "2913bbd2-ae8a-5f71-8c99-4fb6c76f3a91"
 version = "0.34.3"
 
+[[deps.SuiteSparse]]
+deps = ["Libdl", "LinearAlgebra", "Serialization", "SparseArrays"]
+uuid = "4607b0f0-06f3-5cda-b6b1-a6196a1729e9"
+
 [[deps.SuiteSparse_jll]]
 deps = ["Artifacts", "Libdl", "libblastrampoline_jll"]
 uuid = "bea87d4a-7f5b-5778-9afe-8cc45184846c"
@@ -1081,6 +1121,11 @@ deps = ["LaTeXStrings", "Latexify", "Unitful"]
 git-tree-sha1 = "975c354fcd5f7e1ddcc1f1a23e6e091d99e99bc8"
 uuid = "45397f5d-5981-4c77-b2b3-fc36d6e9b728"
 version = "1.6.4"
+
+[[deps.UnsafeArrays]]
+git-tree-sha1 = "da0c9ca60d3371a4bc86b4e65c45db17086fb3ac"
+uuid = "c4a57d5a-5b31-53a6-b365-19f8c011fbd6"
+version = "1.0.6"
 
 [[deps.Unzip]]
 git-tree-sha1 = "ca0969166a028236229f63514992fc073799bb78"
