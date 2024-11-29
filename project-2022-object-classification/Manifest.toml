@@ -2,7 +2,7 @@
 
 julia_version = "1.10.6"
 manifest_format = "2.0"
-project_hash = "40ffba04fcfb4d3418206473060cd64e48207d2a"
+project_hash = "059b50f6f4ea31a61ddc3ecdff85938d1a33ee6a"
 
 [[deps.AMD]]
 deps = ["LinearAlgebra", "SparseArrays", "SuiteSparse_jll"]
@@ -703,6 +703,12 @@ deps = ["DataStructures", "ImageCore", "ImageFiltering", "Interpolations", "Para
 git-tree-sha1 = "a69269ab2fe3da3aadb76833632fee823fbef7b8"
 uuid = "2b14c160-480b-11ea-1b58-656063328ff7"
 version = "0.1.8"
+
+[[deps.ImageFeatures]]
+deps = ["Distributions", "Images", "Random", "SparseArrays"]
+git-tree-sha1 = "e590eb8d806e8fa3176dce71ac51a6f3dddfed2a"
+uuid = "92ff4b2b-8094-53d3-b29d-97f740f06cef"
+version = "0.5.3"
 
 [[deps.ImageFiltering]]
 deps = ["CatIndices", "ComputationalResources", "DataStructures", "FFTViews", "FFTW", "ImageBase", "ImageCore", "LinearAlgebra", "OffsetArrays", "PrecompileTools", "Reexport", "SparseArrays", "StaticArrays", "Statistics", "TiledIteration"]
